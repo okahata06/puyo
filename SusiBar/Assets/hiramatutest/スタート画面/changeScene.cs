@@ -1,23 +1,27 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+using System.Collections;
 using UnityEngine.SceneManagement;
 
 public class changeScene : MonoBehaviour
 {
-    public void change_button()
-    {
-        SceneManager.LoadScene("スタート画面");
-    }
-    // Start is called before the first frame update
+    public Button myButton;
+    public string スタート画面;
+    public float waitTime = 2f;
+
     void Start()
     {
-        
+        myButton.onClick.AddListener(OnMyButtonClick);
     }
-
-    // Update is called once per frame
-    void Update()
+    
+    void OnMyButtonClick()
     {
-        
+        StartCoroutine(WaitAndLoadScene());
+    }
+    IEnumerator WaitAndLoadScene()
+    {
+        yield return new WaitForSeconds(waitTime);
+
+        SceneManager.LoadScene("スタート画面");
     }
 }

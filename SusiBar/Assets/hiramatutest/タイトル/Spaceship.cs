@@ -5,6 +5,7 @@ using UnityEngine;
 public class Spaceship : MonoBehaviour
 {
     public RectTransform ship;
+    public RectTransform UMA;
     private int counter = 0;
     private float move = 0.1f;
 
