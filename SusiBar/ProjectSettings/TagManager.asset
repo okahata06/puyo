@@ -3,7 +3,11 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - neta1
+  - neta2
+  - neta3
+  - dish
   layers:
   - Default
   - TransparentFX
