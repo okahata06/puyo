@@ -6,9 +6,9 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: "Assets/Master/\u30B9\u30BF\u30FC\u30C8\u753B\u9762/\u30B9\u30BF\u30FC\u30C8\u753B\u9762.unity"
+    path: "Assets/henmi/\u30B9\u30BF\u30FC\u30C8\u753B\u9762/\u30B9\u30BF\u30FC\u30C8\u753B\u9762.unity"
     guid: 4f8073b94c05a9543a4a0499f044a0c5
   - enabled: 1
-    path: "Assets/Master/\u30BF\u30A4\u30C8\u30EB/\u30BF\u30A4\u30C8\u30EB.unity"
+    path: "Assets/henmi/\u30BF\u30A4\u30C8\u30EB/\u30BF\u30A4\u30C8\u30EB.unity"
     guid: b3874d3c4b1ef984785a60e6bc983a9d
   m_configObjects: {}
