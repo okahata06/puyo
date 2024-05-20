@@ -14,7 +14,7 @@ public class changeScene : MonoBehaviour
         myButton.onClick.AddListener(OnMyButtonClick);
     }
     
-    void OnMyButtonClick()
+     public void OnMyButtonClick()
     {
         StartCoroutine(WaitAndLoadScene());
     }
