@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Runtime.InteropServices;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 public class neta_Drag : MonoBehaviour
 {
@@ -12,6 +13,7 @@ public class neta_Drag : MonoBehaviour
     //座標移動用
     Vector3 neta_p;
 
+    private Vector2 prePosition;
     // Start is called before the first frame update
     void Start()
     {
@@ -25,7 +27,10 @@ public class neta_Drag : MonoBehaviour
         //Debug.Log(Screen.width);
         //Debug.Log(Screen.height);
     }
-
+    private  void OnMouseBeginDrag(PointerEventData data)
+    {
+        Debug.Log("OnBeginDrag called.");
+    }
     //ドラッグ中
     private void OnMouseDrag()
     {

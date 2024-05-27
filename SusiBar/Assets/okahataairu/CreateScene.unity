@@ -448,28 +448,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1450439881 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1945973724839145760, guid: 8bb173f57837bc241836e154e9b9bb87, type: 3}
-  m_PrefabInstance: {fileID: 6486292160788601346}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1450439883
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1450439881}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Delegates:
-  - eventID: 5
-    callback:
-      m_PersistentCalls:
-        m_Calls: []
 --- !u!1 &1537169721
 GameObject:
   m_ObjectHideFlags: 0
@@ -775,6 +753,10 @@ PrefabInstance:
     - target: {fileID: 430618649943264135, guid: cff96c85bf68e9a489d9f11272eff667, type: 3}
       propertyPath: m_Enabled
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1044490186154097535, guid: cff96c85bf68e9a489d9f11272eff667, type: 3}
+      propertyPath: m_TagString
+      value: dish
       objectReference: {fileID: 0}
     - target: {fileID: 1661586512917388718, guid: cff96c85bf68e9a489d9f11272eff667, type: 3}
       propertyPath: m_Enabled
