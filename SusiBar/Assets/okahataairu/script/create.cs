@@ -7,27 +7,64 @@ using UnityEngine.EventSystems;
 public class create : EventTrigger
 {
 
-    [SerializeField, Header("ネタの数")] int neta_kazu;
+    int neta_kazu = 3;
 
 
-    
+
 
     // Start is called before the first frame update
     void Start()
     {
         //インスペクタで決めたネタ数の配列
-        int[] neta = new int[neta_kazu];
+        //int[] neta = new int[neta_kazu];
+
+
         //配列に各ネタのタグを格納
-        for (int i=0; i<neta.Length; i++) 
-        { 
+        for (int i = 0; i < neta_kazu; i++)
+        {
+            switch (i)
+            {
+                case 0:
+                    GameObject[] neta1 = GameObject.FindGameObjectsWithTag("neta1");
+                    foreach (GameObject obj in neta1)
+                    {
+                        Debug.Log(obj.gameObject.name);
+                    }
+
+                    break;
+                case 1:
+                    GameObject[] neta2 = GameObject.FindGameObjectsWithTag("neta2");
+                    foreach (GameObject obj in neta2)
+                    {
+                        Debug.Log(obj.gameObject.name);
+                    }
+
+                    break;
+                case 2:
+                    GameObject[] neta3 = GameObject.FindGameObjectsWithTag("neta3");
+                    foreach (GameObject obj in neta3)
+                    {
+                        Debug.Log(obj.gameObject.name);
+                    }
+
+                    break;
+                case 3:
+                    GameObject[] neta4 = GameObject.FindGameObjectsWithTag("neta4");
+                    foreach (GameObject obj in neta4)
+                    {
+                        Debug.Log(obj.gameObject.name);
+                    }
+
+                    break;
+
+                default:
+                    break;
+            }
+
+
 
         }
         //動作する
-        //GameObject[] objs = GameObject.FindGameObjectsWithTag("Player");
-        //foreach (GameObject obj in objs)
-        //{
-        //    Debug.Log(obj.gameObject.name);
-        //}
     }
 
     // Update is called once per frame
@@ -39,6 +76,9 @@ public class create : EventTrigger
     //オブジェの上でドロップ
     public override void OnDrop(PointerEventData data)
     {
+
+
+
         Debug.Log("OnDrop called.");
 
     }
