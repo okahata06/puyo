@@ -72,15 +72,13 @@ public class create : MonoBehaviour
     {
 
     }
-    public void OnTriggerEnter(Collider other)
+    public void OnTriggerEnter(Collider col)
     {
+        if(col.gameObject.CompareTag("aa"))
         Debug.Log("trigger.hit");
 
     }
-    public void OnCollisionEnter(Collision collision)
-    {
-        Debug.Log("collision.hit");
-    }
+ 
     //オブジェの上でドロップ
     //public override void OnDrop(PointerEventData data)
     //{
