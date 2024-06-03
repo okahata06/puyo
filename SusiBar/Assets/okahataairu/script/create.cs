@@ -4,7 +4,7 @@ using Unity.Collections.LowLevel.Unsafe;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
-public class create : EventTrigger
+public class create : MonoBehaviour
 {
 
     int neta_kazu = 3;
@@ -66,20 +66,28 @@ public class create : EventTrigger
         }
         //動作する
     }
-
+    
     // Update is called once per frame
     void Update()
     {
 
     }
-
-    //オブジェの上でドロップ
-    public override void OnDrop(PointerEventData data)
+    public void OnTriggerEnter(Collider other)
     {
-
-
-
-        Debug.Log("OnDrop called.");
+        Debug.Log("trigger.hit");
 
     }
+    public void OnCollisionEnter(Collision collision)
+    {
+        Debug.Log("collision.hit");
+    }
+    //オブジェの上でドロップ
+    //public override void OnDrop(PointerEventData data)
+    //{
+
+
+
+    //    Debug.Log("OnDrop called.");
+
+    //}
 }
