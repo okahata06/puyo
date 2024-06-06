@@ -18,7 +18,6 @@ public class changeScene : MonoBehaviour
     {
         // アニメーションを再生する
         animator.SetTrigger("OnClick");
-
         // 1秒間待機する
         yield return new WaitForSeconds(2.0f);
 
