@@ -18,3 +18,4 @@ public class TEST0921 : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
         gameObject.transform.localScale = Vector3.one;
     }
 }
+//いらんかったら消しといて～　　（）←マンコ
