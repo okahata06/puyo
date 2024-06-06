@@ -123,7 +123,7 @@ public class create : MonoBehaviour
     //êGÇÍÇÈÇ∆ï®óùââéZÇ»ÇµÇ≈îªíËälìæ
     public void OnTriggerEnter(Collider col)
     {
-        Vector3 pos = this.gameObject.transform.position;
+        Vector3 pos = new Vector3(this.gameObject.transform.position.x, this.gameObject.transform.position.y,-9);
         
 
         if (col.gameObject == neta[0])
@@ -148,7 +148,7 @@ public class create : MonoBehaviour
     }
     public void OnTriggerStay(Collider col)
     {
-        Vector3 pos = this.gameObject.transform.position;
+        Vector3 pos = new Vector3(this.gameObject.transform.position.x, this.gameObject.transform.position.y, -9);
 
 
         if (col.gameObject == neta[0])
