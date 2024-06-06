@@ -7,15 +7,26 @@ using UnityEngine.EventSystems;
 public class create : MonoBehaviour
 {
     static int neta_kazu = 3;
+
+    int get_neta=100;
+
     GameObject[] neta =new GameObject[neta_kazu];
 
+    Vector3[] neta_pos = new Vector3[neta_kazu];
 
 
     // Start is called before the first frame update
     void Start()
-    {
+    {       
+        //ネタを丸ごと代入
+        neta[0] = GameObject.FindGameObjectWithTag("neta1");
+        neta[1] = GameObject.FindGameObjectWithTag("neta2");
+        neta[2] = GameObject.FindGameObjectWithTag("neta3");
 
-
+        //初期位置の保存
+        neta_pos[0] = neta[0].transform.position;
+        neta_pos[1] = neta[1].transform.position;
+        neta_pos[2] = neta[2].transform.position;
 
         //インスペクタで決めたネタ数の配列
         //int[] neta = new int[neta_kazu];
@@ -75,31 +86,99 @@ public class create : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        
+        //ネタを丸ごと代入
+        neta[0] = GameObject.FindGameObjectWithTag("neta1");
+        neta[1] = GameObject.FindGameObjectWithTag("neta2");
+        neta[2] = GameObject.FindGameObjectWithTag("neta3");
+
+       // Debug.Log(neta[2].transform.position.x);
+
+        if(!Input.GetMouseButton(0)&&
+            neta[0].transform.position.x>=580)
+        {
+            //初期位置に移動
+            neta[0].transform.position = neta_pos[0];
+            get_neta = 0;
+        }
+        if (!Input.GetMouseButton(0) &&
+        neta[1].transform.position.x >= 580)
+        {
+            //初期位置に移動
+            neta[1].transform.position = neta_pos[1];
+            get_neta = 1;
+
+        }
+
+        if (!Input.GetMouseButton(0) &&
+        neta[2].transform.position.x >= 580)
+        {
+            //初期位置に移動
+            neta[2].transform.position = neta_pos[2];
+            get_neta = 2;
+        }
+
 
     }
     //触れると物理演算なしで判定獲得
     public void OnTriggerEnter(Collider col)
     {
+        Vector3 pos = this.gameObject.transform.position;
         
-        if(col.gameObject.CompareTag("neta1"))
+
+        if (col.gameObject == neta[0])
         {
             Debug.Log("neta1_hit");
-            
-        }
-        else if (col.gameObject.CompareTag("neta2"))
-        {
-            Debug.Log("neta2_hit");
+            col.gameObject.transform.position = pos;
 
         }
-        else if (col.gameObject.CompareTag("neta3"))
+        else if (col.gameObject == neta[1])
+        {
+            Debug.Log("neta2_hit");
+            col.gameObject.transform.position = pos;
+
+        }
+        else if (col.gameObject == neta[2])
         {
             Debug.Log("neta3_hit");
-            col.gameObject.transform.position = this.gameObject.transform.position;
+            col.gameObject.transform.position = pos;
         }
 
 
     }
- 
+    public void OnTriggerStay(Collider col)
+    {
+        Vector3 pos = this.gameObject.transform.position;
+
+
+        if (col.gameObject == neta[0])
+        {
+            Debug.Log("neta1_hit");
+            col.gameObject.transform.position = pos;
+
+        }
+        else if (col.gameObject == neta[1])
+        {
+            Debug.Log("neta2_hit");
+            col.gameObject.transform.position = pos;
+
+        }
+        else if (col.gameObject == neta[2])
+        {
+            Debug.Log("neta3_hit");
+            col.gameObject.transform.position = pos;
+        }
+    }
+
+    //他スクでの参照＆変更用
+    public int Get_Neta//public 戻り値 プロパティ名
+    {
+        get { return get_neta; }//get {return フィールド名;}
+        set { get_neta= value; }//set {フィールド名 = value;}
+    }
+
+
+
     //オブジェの上でドロップ
     //public override void OnDrop(PointerEventData data)
     //{

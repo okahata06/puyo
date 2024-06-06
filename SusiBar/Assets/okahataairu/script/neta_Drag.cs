@@ -23,7 +23,7 @@ public class neta_Drag : MonoBehaviour
     {
         neta_p = this.gameObject.transform.position;
         if (neta_p.z < -5)
-            neta_p.z += 0.1f;
+            neta_p.z += 0.3f;
         this.gameObject.transform.position = neta_p;
         //Debug.Log(Screen.width);
         //Debug.Log(Screen.height);
