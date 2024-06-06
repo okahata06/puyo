@@ -1,27 +1,30 @@
 using UnityEngine;
-using UnityEngine.UI;
-using System.Collections;
 using UnityEngine.SceneManagement;
+using System.Collections;
 
 public class changeScene : MonoBehaviour
 {
-    public Button myButton;
-    public string スタート画面;
-    public float waitTime = 2f;
+    public Animator animator; // アニメーターコンポーネントへの参照
 
-    void Start()
+    // ボタンがクリックされたときに呼び出される関数
+    public void OnButtonClick()
     {
-        myButton.onClick.AddListener(OnMyButtonClick);
+        // コルーチンを開始する
+        StartCoroutine(TransitionCoroutine());
     }
-    
-     public void OnMyButtonClick()
-    {
-        StartCoroutine(WaitAndLoadScene());
-    }
-    IEnumerator WaitAndLoadScene()
-    {
-        yield return new WaitForSeconds(waitTime);
 
+    // コルーチン関数
+    IEnumerator TransitionCoroutine()
+    {
+        // アニメーションを再生する
+        animator.SetTrigger("OnClick");
+
+        // 1秒間待機する
+        yield return new WaitForSeconds(2.0f);
+
+        // 移動先のシーンをロードする（シーン名は適宜変更）
         SceneManager.LoadScene("スタート画面");
     }
 }
+
+
