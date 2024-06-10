@@ -42,15 +42,15 @@ public class neta_Drag : MonoBehaviour
         //画面サイズによって移動量を変更。これが限界
         if(w>= 1920 || h>=900)
         {
-            neta_p = new Vector3(Input.mousePosition.x * 0.3f + 30, Input.mousePosition.y * 0.3f + 20, z_pos);
+            neta_p = new Vector3(Input.mousePosition.x * 0.3f + 60, Input.mousePosition.y * 0.3f + 25, z_pos);
         }
         else if(w>=1000||h>=500)
         {
-            neta_p = new Vector3(Input.mousePosition.x * 0.46f + 35, Input.mousePosition.y * 0.47f + 20, z_pos);
+            neta_p = new Vector3(Input.mousePosition.x * 0.46f + 45, Input.mousePosition.y * 0.47f + 20, z_pos);
         }
         else
         {
-            neta_p = new Vector3(Input.mousePosition.x * 1f + 35, Input.mousePosition.y * 1f + 25, z_pos);
+            neta_p = new Vector3(Input.mousePosition.x * 1f + 45, Input.mousePosition.y * 1f + 25, z_pos);
         }
         //カーソルの位置にネタを移動
         this.gameObject.transform.position = neta_p;

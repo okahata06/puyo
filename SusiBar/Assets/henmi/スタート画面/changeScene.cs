@@ -22,7 +22,7 @@ public class changeScene : MonoBehaviour
         yield return new WaitForSeconds(2.0f);
 
         // 移動先のシーンをロードする（シーン名は適宜変更）
-        SceneManager.LoadScene("スタート画面");
+        SceneManager.LoadScene("CreateScene");
     }
 }
 
