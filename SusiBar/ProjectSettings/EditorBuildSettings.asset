@@ -6,9 +6,18 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: "Assets/henmi/\u30B9\u30BF\u30FC\u30C8\u753B\u9762/\u30B9\u30BF\u30FC\u30C8\u753B\u9762.unity"
-    guid: 4f8073b94c05a9543a4a0499f044a0c5
-  - enabled: 1
     path: "Assets/henmi/\u30BF\u30A4\u30C8\u30EB/\u30BF\u30A4\u30C8\u30EB.unity"
     guid: b3874d3c4b1ef984785a60e6bc983a9d
+  - enabled: 1
+    path: Assets/henmi/CreateScene.unity
+    guid: c536e0edf8deeb447ba7b7ed8aca9fac
+  - enabled: 1
+    path: Assets/yoshidatest/gaugebar/stage.unity
+    guid: 8199ba87667562445aec6f20e0c6f36f
+  - enabled: 1
+    path: Assets/isumi test/isumi haruma/sukoabo-do.unity
+    guid: 7c2dbb07e0ea063469404b2f213c89ed
+  - enabled: 1
+    path: "Assets/henmi/\u30B9\u30BF\u30FC\u30C8\u753B\u9762/\u30B9\u30BF\u30FC\u30C8\u753B\u9762.unity"
+    guid: 4f8073b94c05a9543a4a0499f044a0c5
   m_configObjects: {}

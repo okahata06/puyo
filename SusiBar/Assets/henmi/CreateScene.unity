@@ -541,7 +541,6 @@ Canvas:
   m_OverrideSorting: 0
   m_OverridePixelPerfect: 0
   m_SortingBucketNormalizedSize: 0
-  m_VertexColorAlwaysGammaSpace: 0
   m_AdditionalShaderChannelsFlag: 0
   m_SortingLayerID: 0
   m_SortingOrder: 0
@@ -817,6 +816,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: "\u30CD\u30BF (1)"
       objectReference: {fileID: 0}
+    - target: {fileID: 6694105317292586442, guid: 56b33159daf7da5479924ee83d406d4c, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: a6a810e78eb2ffe4c9a1656ae2a48e6d, type: 2}
     - target: {fileID: 7255926228401144675, guid: 56b33159daf7da5479924ee83d406d4c, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -918,6 +921,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 524683803055431957}
     m_Modifications:
+    - target: {fileID: 1907330614883628520, guid: 16ec415b5f22ae441b29268b629d9d64, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: cbef22b83e0ef774a95f0c62bc09846c, type: 2}
     - target: {fileID: 2462400481848247105, guid: 16ec415b5f22ae441b29268b629d9d64, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -1055,5 +1062,9 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 8461697835464728322, guid: 8bb173f57837bc241836e154e9b9bb87, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 8d6032e5e1c40cb4ea0b1fe20b397fe1, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8bb173f57837bc241836e154e9b9bb87, type: 3}
